@@ -7,7 +7,7 @@ from email.policy import default
 import uuid
 from  django.conf import settings
 # from django.conf import settings
-# User = settings.AUTH_USER_MODEL
+# User = sett
 
 class Category(models.Model):
     name = models.CharField(max_length=255, db_index=True)
