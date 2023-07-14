@@ -123,7 +123,7 @@ def checkout(request):
             }
         }
 
-        response = requests.post('https://api.flutterwave.com/v3/payments', json=payment_request, headers={'Authorization': 'Bearer FLWSECK_TEST-a918ce86268653e3db4517bc9e145392-X'})
+        response = requests.post('https://api.flutterwave.com/v3/payments', json=payment_request, headers={'Authorization': env(‘FLUTTER_KEY’)})
 
         if response.status_code == 200:
             response = response.json()
